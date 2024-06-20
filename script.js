@@ -1,5 +1,3 @@
-
-
 function add(a,b){
     return Number(a) + Number(b);
 }
@@ -55,7 +53,12 @@ function appendOperatorOnDisplay(id){
     number2 = '';
 
     //print the number on display
+    if(operator === '=') operator = '';
     display.textContent = number1+operator;
+    if(operator === ''){
+        number2 = number1;
+        number1='';
+    }
 
     
 
@@ -80,7 +83,7 @@ container.addEventListener('click',(e)=>{
     console.log(clickedButton);
     if(+clickedButton.id>= 0 || +clickedButton.id<=9)
     {
-        appendNumberOnDisplay(+clickedButton.id);
+        appendNumberOnDisplay(clickedButton.id);
     }
     else if(clickedButton.id === 'AC') clearDisplay();
     else if(clickedButton.id === 'backspace') backspace();
@@ -88,3 +91,4 @@ container.addEventListener('click',(e)=>{
         appendOperatorOnDisplay(clickedButton.id);
     }
 })
+
