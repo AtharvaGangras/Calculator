@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+}
+.calculator{
+    background-color:grey;
+    padding:20px;
+    border: 3px solid black;
+}
+
+.displaycontainer{
+    background-color: white;
+    min-width: 30px;
+    min-height: 20px;
+}
+/* button arrangement */
+.container{
+    display:flex;
+    flex-direction: column;
+    gap:3px;
+}
+.line{
+    display:flex;
+    gap: 3px;
+    flex-grow: 1;
+}
+
+button{
+    box-sizing: border-box;
+    /* padding:10px;
+    margin:3px; */
+    min-width: 50px;
+    min-height:50px;
+    border: 2px solid black;
+    
+}
